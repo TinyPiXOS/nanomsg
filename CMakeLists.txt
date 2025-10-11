@@ -9,7 +9,7 @@ include (CheckCSourceCompiles)
 include (GNUInstallDirs)
 
 # 强制设置安装目录为项目内的 install 目录
-set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install CACHE PATH "Installation directory" FORCE)
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install CACHE PATH "Installation directory")
 
 if (POLICY CMP0042)
     # Newer cmake on MacOS should use @rpath
