@@ -108,7 +108,7 @@ int main ()
     test_close (rep1);
 
     /*  Check sending a request when the peer is not available. (It should
-        be sent immediatelly when the peer comes online rather than relying
+        be sent immediately when the peer comes online rather than relying
         on the resend algorithm. */
     req1 = test_socket (AF_SP, NN_REQ);
     test_connect (req1, SOCKET_ADDRESS);
@@ -126,7 +126,7 @@ int main ()
     test_close (rep1);
 
     /*  Check removing socket request sent to (It should
-        be sent immediatelly to other peer rather than relying
+        be sent immediately to other peer rather than relying
         on the resend algorithm). */
     req1 = test_socket (AF_SP, NN_REQ);
     test_bind (req1, SOCKET_ADDRESS);

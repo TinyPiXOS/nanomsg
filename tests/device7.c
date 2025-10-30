@@ -42,7 +42,7 @@ void device5 (NN_UNUSED void *arg)
     int dev0;
     int dev1;
 
-    /*  Intialise the device sockets. */
+    /*  Initialise the device sockets. */
     dev0 = test_socket (AF_SP_RAW, NN_REP);
     test_bind (dev0, socket_address_h);
     dev1 = test_socket (AF_SP_RAW, NN_REQ);

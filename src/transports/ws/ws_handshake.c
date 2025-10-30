@@ -190,7 +190,7 @@ void nn_ws_handshake_start (struct nn_ws_handshake *self,
     struct nn_usock *usock, struct nn_pipebase *pipebase,
     int mode, const char *resource, const char *host)
 {
-    /*  It's expected this resource has been allocated during intial connect. */
+    /*  It's expected this resource has been allocated during initial connect. */
     if (mode == NN_WS_CLIENT)
         nn_assert (strlen (resource) >= 1);
 
@@ -326,7 +326,7 @@ static int nn_ws_match_value (const char* termseq, const char **subj,
     if (len)
         *len = 0;
 
-    /*  Find first occurence of termination sequence. */
+    /*  Find first occurrence of termination sequence. */
     end = strstr (start, termseq);
 
     /*  Was a termination sequence found? */

@@ -64,7 +64,7 @@ int main (int argc, const char *argv[])
     test_addr_from(socket_address_a, "tcp", "127.0.0.1", port);
     test_addr_from(socket_address_b, "tcp", "127.0.0.1", port + 1);
 
-    /*  Intialise the device sockets. */
+    /*  Initialise the device sockets. */
     dev0 = test_socket (AF_SP_RAW, NN_RESPONDENT);
     dev1 = test_socket (AF_SP_RAW, NN_SURVEYOR);
 

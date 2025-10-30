@@ -37,7 +37,7 @@
 
 /*  To make the algorithm super efficient we directly cast pipe pointers to
     pipe IDs (rather than maintaining a hash table). For this to work, it is
-    neccessary for the pointer to fit in 64-bit ID. */
+    necessary for the pointer to fit in 64-bit ID. */
 CT_ASSERT (sizeof (uint64_t) >= sizeof (struct nn_pipe*));
 
 /*  Implementation of nn_sockbase's virtual functions. */

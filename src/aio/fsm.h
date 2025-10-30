@@ -87,8 +87,8 @@ void nn_fsm_stop (struct nn_fsm *self);
 void nn_fsm_stopped (struct nn_fsm *self, int type);
 void nn_fsm_stopped_noevent (struct nn_fsm *self);
 
-/*  Replaces current owner of the fsm by the owner speicified by 'owner'
-    parameter. The parameter will hold the old owner afrer the call. */
+/*  Replaces current owner of the fsm by the owner specified by 'owner'
+    parameter. The parameter will hold the old owner after the call. */
 void nn_fsm_swap_owner (struct nn_fsm *self, struct nn_fsm_owner *owner);
 
 struct nn_worker *nn_fsm_choose_worker (struct nn_fsm *self);
@@ -114,7 +114,7 @@ void nn_fsm_raiseto (struct nn_fsm *self, struct nn_fsm *dst,
 
 /*  This function is very lowlevel action feeding
     Used in worker threads and timers, shouldn't be used by others
-    use nn_fsm_action/nn_fsm_raise/nn_fsm_raiseto instread*/
+    use nn_fsm_action/nn_fsm_raise/nn_fsm_raiseto instead*/
 void nn_fsm_feed (struct nn_fsm *self, int src, int type, void *srcptr);
 
 #endif

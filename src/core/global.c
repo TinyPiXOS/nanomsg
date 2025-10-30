@@ -59,7 +59,7 @@
 #include <unistd.h>
 #endif
 
-/*  Max number of concurrent SP sockets. Configureable at build time */
+/*  Max number of concurrent SP sockets. Configurable at build time */
 #ifndef NN_MAX_SOCKETS
 #define NN_MAX_SOCKETS 512
 #endif

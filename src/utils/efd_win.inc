@@ -73,7 +73,7 @@ int nn_efd_init (struct nn_efd *self)
     if (rc == SOCKET_ERROR)
         goto wsafail;
 
-    /*  Start listening for the incomming connections. In normal case we are
+    /*  Start listening for the incoming connections. In normal case we are
         going to accept just a single connection, so backlog buffer of size
         1 is sufficient. */
     rc = listen (listener, 1);

@@ -152,7 +152,7 @@ int nn_cws_create (struct nn_ep *ep)
     self->ep = ep;
     self->peer_gone = 0;
 
-    /*  Initalise the endpoint. */
+    /*  Initialise the endpoint. */
     nn_ep_tran_setup (ep, &nn_cws_ep_ops, self);
 
     /*  Check whether IPv6 is to be used. */

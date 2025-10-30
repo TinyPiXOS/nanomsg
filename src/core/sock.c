@@ -176,7 +176,7 @@ void nn_sock_stopped (struct nn_sock *self)
     nn_ctx_raise (self->fsm.ctx, &self->fsm.stopped);
 }
 
-/*  Stop the socket.  This will prevent new calls from aquiring a
+/*  Stop the socket.  This will prevent new calls from acquiring a
     hold on the socket, cause endpoints to shut down, and wake any
     threads waiting to recv or send data. */
 void nn_sock_stop (struct nn_sock *self)
@@ -534,7 +534,7 @@ int nn_sock_rm_ep (struct nn_sock *self, int eid)
 
     nn_ctx_enter (&self->ctx);
 
-    /*  Find the specified enpoint. */
+    /*  Find the specified endpoint. */
     ep = NULL;
     for (it = nn_list_begin (&self->eps);
           it != nn_list_end (&self->eps);

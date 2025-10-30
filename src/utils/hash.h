@@ -57,7 +57,7 @@ void nn_hash_insert (struct nn_hash *self, uint32_t key,
 void nn_hash_erase (struct nn_hash *self, struct nn_hash_item *item);
 
 /*  Gets an item in the hash based on the key. Returns NULL if there's no
-    corresponing item in the hash table. */
+    corresponding item in the hash table. */
 struct nn_hash_item *nn_hash_get (struct nn_hash *self, uint32_t key);
 
 /*  Initialise a hash item. At this point it is not a part of any hash table. */

@@ -117,7 +117,7 @@
          additional op codes can be assigned, obviating the need for an
          explicit version field.</t>
 
-      <t>These operation codes are used in the mangement of logical connections,
+      <t>These operation codes are used in the management of logical connections,
          and are described in more detail in the Logical Connections section
          below.</t>
 
@@ -185,7 +185,7 @@
 
            <t>As with other transports like TCP, we intentionally create the
            notion of a connection initiator, and a connection accepter.
-           The initator is always the party who initiates the connection,
+           The initiator is always the party who initiates the connection,
            and is the party responsible for sending CREQ messages. The
            accepter is the party that receives the CREQ messages, and
            replies with CACK (or possibly DISC).</t>
@@ -201,7 +201,7 @@
         store data for each session.  In order to prevent a stale session
         from consuming these resources forever, and in order to keep
         any intervening state active (e.g. NAT rules), a CACK message may be
-        sent at any time by the initator.</t>
+        sent at any time by the initiator.</t>
 
         <t>In the event of an error, the accepter MAY reply with an
         DISC message.  Otherwise it MUST reply with a CREQ message.</t>

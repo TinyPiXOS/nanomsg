@@ -98,13 +98,12 @@ void nn_poller_set_in (struct nn_poller *self, struct nn_poller_hndl *hndl)
 
 void nn_poller_reset_in (struct nn_poller *self, struct nn_poller_hndl *hndl)
 {
-    int rc;
     struct kevent ev;
     int i;
 
     if (hndl->events & NN_POLLER_EVENT_IN) {
         EV_SET (&ev, hndl->fd, EVFILT_READ, EV_DELETE, 0, 0, 0);
-        rc = kevent (self->kq, &ev, 1, NULL, 0, NULL);
+        kevent (self->kq, &ev, 1, NULL, 0, NULL);
         hndl->events &= ~NN_POLLER_EVENT_IN;
     }
 

@@ -43,7 +43,7 @@ void device1 (NN_UNUSED void *arg)
     int deva;
     int devb;
 
-    /*  Intialise the device sockets. */
+    /*  Initialise the device sockets. */
     deva = test_socket (AF_SP_RAW, NN_PAIR);
     test_bind (deva, SOCKET_ADDRESS_A);
     devb = test_socket (AF_SP_RAW, NN_PAIR);
@@ -64,7 +64,7 @@ void device2 (NN_UNUSED void *arg)
     int devc;
     int devd;
 
-    /*  Intialise the device sockets. */
+    /*  Initialise the device sockets. */
     devc = test_socket (AF_SP_RAW, NN_PULL);
     test_bind (devc, SOCKET_ADDRESS_C);
     devd = test_socket (AF_SP_RAW, NN_PUSH);
@@ -84,7 +84,7 @@ void device3 (NN_UNUSED void *arg)
     int rc;
     int deve;
 
-    /*  Intialise the device socket. */
+    /*  Initialise the device socket. */
     deve = test_socket (AF_SP_RAW, NN_BUS);
     test_bind (deve, SOCKET_ADDRESS_E);
 

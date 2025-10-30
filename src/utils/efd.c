@@ -84,7 +84,7 @@ int nn_efd_wait (struct nn_efd *self, int timeout)
         rc = nn_err_wsa_to_posix (WSAGetLastError ());
         errno = rc;
 
-        /*  Treat these as a non-fatal errors, typically occuring when the
+        /*  Treat these as a non-fatal errors, typically occurring when the
             socket is being closed from a separate thread during a blocking
             I/O operation. */
         if (rc == EINTR || rc == ENOTSOCK) {

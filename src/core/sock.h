@@ -112,7 +112,7 @@ struct nn_sock
         uint64_t messages_received;
         /*  Bytes sent (sum length of data in messages sent)  */
         uint64_t bytes_sent;
-        /*  Bytes recevied (sum length of data in messages received)  */
+        /*  Bytes received (sum length of data in messages received)  */
         uint64_t bytes_received;
 
         /*****  Level-style values *****/

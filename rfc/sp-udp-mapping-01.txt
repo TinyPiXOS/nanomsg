@@ -139,7 +139,7 @@ Internet-Draft             UDP mapping for SPs              October 2016
    op codes can be assigned, obviating the need for an explicit version
    field.
 
-   These operation codes are used in the mangement of logical
+   These operation codes are used in the management of logical
    connections, and are described in more detail in the Logical
    Connections section below.
 
@@ -206,7 +206,7 @@ Internet-Draft             UDP mapping for SPs              October 2016
 5.1.  Connection roles
 
    As with other transports like TCP, we intentionally create the notion
-   of a connection initiator, and a connection accepter.  The initator
+   of a connection initiator, and a connection accepter.  The initiator
    is always the party who initiates the connection, and is the party
    responsible for sending CREQ messages.  The accepter is the party
    that receives the CREQ messages, and replies with CACK (or possibly
@@ -232,7 +232,7 @@ Internet-Draft             UDP mapping for SPs              October 2016
    data for each session.  In order to prevent a stale session from
    consuming these resources forever, and in order to keep any
    intervening state active (e.g. NAT rules), a CACK message may be sent
-   at any time by the initator.
+   at any time by the initiator.
 
    In the event of an error, the accepter MAY reply with an DISC
    message.  Otherwise it MUST reply with a CREQ message.

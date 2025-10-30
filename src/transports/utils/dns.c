@@ -71,7 +71,7 @@ int nn_dns_check_hostname (const char *name, size_t namelen)
             --namelen;
             ++labelsz;
 
-            /*  Labels longer than 63 charcters are not permitted. */
+            /*  Labels longer than 63 characters are not permitted. */
             if (labelsz > 63)
                 return -EINVAL;
 

@@ -79,7 +79,7 @@ static void nn_usock_shutdown (struct nn_fsm *self, int src, int type,
 
 void nn_usock_init (struct nn_usock *self, int src, struct nn_fsm *owner)
 {
-    /*  Initalise the state machine. */
+    /*  Initialise the state machine. */
     nn_fsm_init (&self->fsm, nn_usock_handler, nn_usock_shutdown,
         src, self, owner);
     self->state = NN_USOCK_STATE_IDLE;
@@ -112,7 +112,7 @@ void nn_usock_init (struct nn_usock *self, int src, struct nn_fsm *owner)
     nn_worker_task_init (&self->task_recv, NN_USOCK_SRC_TASK_RECV, &self->fsm);
     nn_worker_task_init (&self->task_stop, NN_USOCK_SRC_TASK_STOP, &self->fsm);
 
-    /*  Intialise events raised by usock. */
+    /*  Initialise events raised by usock. */
     nn_fsm_event_init (&self->event_established);
     nn_fsm_event_init (&self->event_sent);
     nn_fsm_event_init (&self->event_received);

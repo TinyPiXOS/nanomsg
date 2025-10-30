@@ -262,7 +262,7 @@ int nn_req_crecv (struct nn_sockbase *self, struct nn_msg *msg)
     if (nn_slow (!nn_req_inprogress (req)))
         return -EFSM;
 
-    /*  If reply was not yet recieved, wait further. */
+    /*  If reply was not yet received, wait further. */
     if (nn_slow (req->state != NN_REQ_STATE_DONE))
         return -EAGAIN;
 

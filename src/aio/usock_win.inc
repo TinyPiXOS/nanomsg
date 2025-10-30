@@ -82,7 +82,7 @@ void nn_usock_init (struct nn_usock *self, int src, struct nn_fsm *owner)
     self->type = -1;
     self->protocol = -1;
 
-    /*  Intialise events raised by usock. */
+    /*  Initialise events raised by usock. */
     nn_fsm_event_init (&self->event_established);
     nn_fsm_event_init (&self->event_sent);
     nn_fsm_event_init (&self->event_received);
@@ -403,7 +403,7 @@ void nn_usock_send (struct nn_usock *self, const struct nn_iovec *iov,
     memset (&self->out.olpd, 0, sizeof (self->out.olpd));
     if (self->domain == AF_UNIX)
     {
-        /* TODO: Do not copy the buffer, find an efficent way to Write
+        /* TODO: Do not copy the buffer, find an efficient way to Write
            multiple buffers that doesn't affect the state machine. */
 
         /*  Ensure the total buffer size does not exceed size limitation

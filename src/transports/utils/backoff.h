@@ -25,7 +25,7 @@
 
 #include "../../aio/timer.h"
 
-/*  Timer with exponential backoff. Actual wating time is (2^n-1)*minivl,
+/*  Timer with exponential backoff. Actual waiting time is (2^n-1)*minivl,
     meaning that first wait is 0 ms long, second one is minivl ms long etc. */
 
 #define NN_BACKOFF_TIMEOUT NN_TIMER_TIMEOUT

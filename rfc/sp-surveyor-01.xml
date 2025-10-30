@@ -406,7 +406,7 @@
       <section title = "RESPONDENT endpoint">
 
         <t>RESPONDENT endpoints are used to receive surveys from the clients
-	   and send resopnses back to the clients.</t>
+	   and send responses back to the clients.</t>
 
         <t>First of all, each RESPONDENT socket is responsible for assigning
 	   unique 31-bit channel IDs to the individual associated channels.</t>
@@ -545,7 +545,7 @@
            algorithm above.</t>
 
 	<t>Finally, when the timeout for a survey expires, then the survey
-	   must be canceled in a manner similar to user-initiated cancelation.
+	   must be canceled in a manner similar to user-initiated cancellation.
 	   That is, the stored copy of the survey must be deleted, the timer
 	   removed, and any further responses received with the same survey ID
 	   are subsequently discarded.</t>

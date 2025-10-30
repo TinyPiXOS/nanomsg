@@ -52,6 +52,7 @@ void nn_chunkref_term (struct nn_chunkref *self)
 {
     if (self->size == NN_CHUNKREF_EXT) {
         nn_chunk_free (self->u.chunk);
+        self->size = 0;
     }
 }
 
@@ -100,7 +101,7 @@ void nn_chunkref_cp (struct nn_chunkref *dst, struct nn_chunkref *src)
 
 void *nn_chunkref_data (struct nn_chunkref *self)
 {
-    if (self->size > NN_CHUNKREF_MAX) {
+    if (self->size == NN_CHUNKREF_EXT) {
         return self->u.chunk;
     } else {
         return self->u.ref;
@@ -109,7 +110,7 @@ void *nn_chunkref_data (struct nn_chunkref *self)
 
 size_t nn_chunkref_size (struct nn_chunkref *self)
 {
-    if (self->size > NN_CHUNKREF_MAX) {
+    if (self->size == NN_CHUNKREF_EXT) {
         return (nn_chunk_size(self->u.chunk));
     }
     return self->size;
@@ -118,7 +119,7 @@ size_t nn_chunkref_size (struct nn_chunkref *self)
 void nn_chunkref_trim (struct nn_chunkref *self, size_t n)
 {
     if (self->size == NN_CHUNKREF_EXT) {
-        nn_chunk_trim (self->u.chunk, n);
+        self->u.chunk = nn_chunk_trim (self->u.chunk, n);
         return;
     }
 

@@ -295,7 +295,7 @@ static int nn_bipc_listen (struct nn_bipc *self)
 
     /*  Delete the IPC file left over by eventual previous runs of
         the application. We'll check whether the file is still in use by
-        connecting to the endpoint. On Windows plaform, NamedPipe is used
+        connecting to the endpoint. On Windows platform, NamedPipe is used
         which does not have an underlying file. */
 #if defined NN_HAVE_UNIX_SOCKETS
     fd = socket (AF_UNIX, SOCK_STREAM, 0);

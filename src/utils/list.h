@@ -63,7 +63,7 @@ struct nn_list_item *nn_list_prev (struct nn_list *self,
 struct nn_list_item *nn_list_next (struct nn_list *self,
     struct nn_list_item *it);
 
-/*  Adds the item to the list before the item pointed to by 'it'. Priot to
+/*  Adds the item to the list before the item pointed to by 'it'. Prior to
     insertion item should not be part of any list. */
 void nn_list_insert (struct nn_list *self, struct nn_list_item *item,
     struct nn_list_item *it);

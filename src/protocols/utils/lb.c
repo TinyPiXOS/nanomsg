@@ -68,12 +68,12 @@ int nn_lb_send (struct nn_lb *self, struct nn_msg *msg, struct nn_pipe **to)
     int rc;
     struct nn_pipe *pipe;
 
-    /*  Pipe is NULL only when there are no avialable pipes. */
+    /*  Pipe is NULL only when there are no available pipes. */
     pipe = nn_priolist_getpipe (&self->priolist);
     if (nn_slow (!pipe))
         return -EAGAIN;
 
-    /*  Send the messsage. */
+    /*  Send the message. */
     rc = nn_pipe_send (pipe, msg);
     errnum_assert (rc >= 0, -rc);
 

@@ -453,7 +453,7 @@ Internet-Draft            Surveor/Respondent SP               March 2015
 5.2.  RESPONDENT endpoint
 
    RESPONDENT endpoints are used to receive surveys from the clients and
-   send resopnses back to the clients.
+   send responses back to the clients.
 
    First of all, each RESPONDENT socket is responsible for assigning
    unique 31-bit channel IDs to the individual associated channels.
@@ -603,7 +603,7 @@ Internet-Draft            Surveor/Respondent SP               March 2015
    algorithm above.
 
    Finally, when the timeout for a survey expires, then the survey must
-   be canceled in a manner similar to user-initiated cancelation.  That
+   be canceled in a manner similar to user-initiated cancellation.  That
    is, the stored copy of the survey must be deleted, the timer removed,
    and any further responses received with the same survey ID are
    subsequently discarded.

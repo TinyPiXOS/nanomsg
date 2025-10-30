@@ -1,6 +1,6 @@
 /*
     Copyright (c) 2013 GoPivotal, Inc.  All rights reserved.
-    Copyright 2015 Garrett D'Amore <garrett@damore.org>
+    Copyright 2025 Garrett D'Amore <garrett@damore.org>
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"),
@@ -35,11 +35,7 @@ void nn_closefd (int fd)
     if (nn_slow (fd < 0)) {
         return;
     }
-    rc = close (fd);
-    if (nn_fast (rc == 0))
-        return;
-    errno_assert (errno == EINTR || errno == ETIMEDOUT ||
-        errno == EWOULDBLOCK || errno == EINPROGRESS || errno == ECONNRESET);
+    (void) close (fd);
 }
 
 #endif
